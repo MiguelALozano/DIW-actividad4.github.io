@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIW Actividad 4 - GRID</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/desktop.css" media="screen and (min-width: 1280px)">
+	<link rel="stylesheet" type="text/css" href="styles/tablet.css" media="screen and (min-width:640px) and (max-width: 1280px)">
+	<link rel="stylesheet" type="text/css" href="styles/mobile.css" media="screen and (max-width: 640px)">
+	
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <img class="img-logo" src="img/header.jpg" alt="Logo pizzeria">
+    </header>
+    <nav class="nav">
+        <ul class="lista">
+            <li><a href=#>OFERTAS</a></li>
+            <li><a href=#>MENÚS</a></li>
+            <li><a href=#>PIZZAS</a></li>
+            <li><a href=#>BEBIDAS</a></li>
+        </ul>
+    </nav>
+    <section>
+        <!-- Introducción de datos a través de los input tipo text -->        
+        <h2> Haz tu pedido de pizza </h2>
+        <form id="formulario" class="formulario" action="#" method="get">
+            <div class="inputs">
+                <input class="texto" type="text"  id="nombre" name="nombre" placeholder="Nombre" autofocus>
+                <input class="texto" type="text" id="direccion" name="direccion" placeholder="Dirección" >
+                <input class="texto" type="tel" id="tel" name="tel" placeholder="Teléfono" >
+                <input class="texto" type="email" id="email" nam value="" placeholder="E-mail" >
+            </div>
+
+            <!-- Sección radio button -->
+            <h4>Elige el tamaño</h4>
+            <div id="tamanoPizza" class="contiene-size">
+                    <div><img class="small" src="img/pizza.png" alt="pizza"></div>
+                    <div><img class="medium" src="img/pizza.png" alt="pizza"></div>
+                    <div><img class="big" src="img/pizza.png" alt="pizza"></div>
+                    <div><input class="pizza" type="radio" name="size" id="small" value="small"></div>
+                    <div><input class="pizza" type="radio" name="size" id="medium" value="medium"></div>
+                    <div><input class="pizza" type="radio" name="size" id="big" value="big"></div>
+                    <p>Pequeña</p>
+                    <p>Mediana</p>
+                    <p>Grande</p>
+            </div>
+
+            <!-- Sección checkBox -->
+            <h4>Que ingredientes te atreves a pedir?</h4>
+            <div id="ingredientes" class="ingredientes">
+                    <div><img src="img/peperoncino.png" alt="Peperoncino"></div>
+                    <div class="check"><input type="checkbox" id="ingredient" name="ingredient" value="peperoncino"></div>
+                    <p class="text">Peperoncino</p>
+
+                    <div><img src="img/jalapenio.png" alt="Jalapenio"></div>
+                    <div class="check"><input type="checkbox" name="ingredient" value="jalapenio"></div>
+                    <p class="text">Jalapeño</p>
+
+                    <div><img src="img/tabasco.png" alt="Tabasco"></div>
+                    <div class="check"><input type="checkbox" name="ingredient" value="tabasco"></div>
+                    <p class="text">Tabasco</p>
+
+                    <div><img src="img/peperoni.png" alt="Peperoni"></div>
+                    <div class="check"><input type="checkbox" name="ingredient" value="peperoni"></div>
+                    <p class="text">Peperoni</p>
+                </div>
+            
+            <!-- Botones pedido/borrar -->
+            <div class="pedido">
+                <input type="image" src="img/pizza-pedido.png" alt="pizza" id="submit">
+                <input type="image" src="img/pizza-borrar-pedido.png" alt="pizza" id="reset">
+            </div>
+            
+        </form>
+
+        <!-- Importes -->
+        <div class="importes">
+            <div><h5 id="importe_masa">Importe de la masa: </h5></div>
+            <div><h5 id="importe_ingrediente">Importe de los ingredientes: </h5></div>
+            <div><h5 id="importe_total">Importe TOTAL: </h5></div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="pie">
+            <div>
+                <p>© Copyright 2021 - Miguel A. Lozano</p>
+            </div>
+            <div>
+                <p>Privacidad, cookies y condiciones legales | Navegación</p>
+            </div>
+            <div class="redes">
+                <a href="http://www.facebook.com" target="blank"><img src="img/svg/facebook_white.svg">Facebook</a>
+                <a href="http://www.instagram.com" target="blank"><img src="img/svg/instagram_white.svg">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,259 +1,284 @@
 :root {
-    --color-principal: rgb(0,0,0);
+    --color-principal: rgb(0, 0, 0);
+    --color-gold: rgb(196, 158, 92);
     --color-white: rgb(255, 255, 255);
-    --color-secundario: rgb(235, 235, 235);
-    --color-gray: rgb(90, 90, 90); 
+    --color-gray: rgb(118, 116, 116);
     --color-orange: rgb(255, 115, 0);
-    --color-red: rgb(255, 0 , 0);
 }
 
 * {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
 }
 
 body {
-    width: 100%;
+    min-width: 400px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     background-color: var(--color-principal);
-    min-width: 400px;
-    max-width: 1920px;
 }
 
-h2 {
-    width: 50%;
-    margin: 0px auto;
-    font-size: 2.5vw;
-    font-weight: 100;
+h1{
+    font-size: 2rem;
+    font-weight: 500;
     text-align: center;
-    color: var(--color-white);
+    letter-spacing: 0.1rem;
+    color: var(--color-principal);
 }
-h4 {
-    margin-top: 6%;
-    font-size: 2.2vw;
+h2{
+    font-size: 1.5rem;
     font-weight: 300;
     text-align: center;
-    color: var(--color-gray);
+    color: var(--color-principal);
 }
-h5 {
-    margin-top: 1%;
-    font-size: 1.5vw;
-    font-weight: 200;
-    text-align: Left;
-    color: var(--color-white);
-}
-
-/* ********************* CABECERA ****************** */
+/* ****************************************** HEADER ****************************************** */
 header {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
     width: 100%;
+    margin: 0px auto;
+    background-color: var(--color-principal);
 }
 
-.img-logo {
+.cabecera{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+.logo{
+    width: 20%;
+    margin: auto;
+}
+@media screen and (max-width: 600px) {
+    .cabecera{
+        grid-template-columns: 1fr;
+    }
+    .logo{
+        width: 35%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .cabecera{
+        width: 1200px;
+        margin: 0px auto;
+    }
+}
+
+/* ****************************************** NAV ****************************************** */
+nav{
+    width: 100%;
+    margin: 0px auto;
+}
+.menu{
     width: 50%;
-}
-
-/* ********************* NAV ****************** */
-.nav{
-    display:grid;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    width: 50%;
-}
-
-.lista{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     list-style: none;
-    margin-bottom: 2%;
+    padding: 0.8rem;
 }
-
-.lista li a {
-    text-align: center;
-    font-size: 1.5vw;
+nav ul li a, .desplegable {
+    font-size: 1rem;
     font-weight: 400;
     text-decoration: none;
     text-align: center;
-    color: var(--color-white);
+    color: var(--color-gold);
 }
-
-.lista li a:hover {
+nav ul li a h4 {
+    font-size: 0.8rem;
+    font-weight: 300;
     text-decoration: none;
-    color: var(--color-gray);
-}
-
-/* ********************* SECTION ****************** */
-section {
-    display: grid;
-    grid-template-rows:10% 80% 20%;
-    color:var(--color-white);
     text-align: center;
+    color: var(--color-gold);
+}
+a:hover {
+    opacity: 0.6;
 }
 
-.formulario{
-    display: grid;
-    grid-template-rows: repeat(6, auto);
-    justify-items: center;
-    align-items: start;
-    width: 50%;
-    margin: 1% auto;
+/* ****************************************** SECTION ****************************************** */
+
+/* ********************* BUSCAR ****************** */
+
+main{
+    background-image: url("../images/img-01.jpg");
+    background-color: var(--color-white);
+    width: 100%;
+    height: auto; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
 }
 
-        /* ----------- inputs ----------- */
-.inputs{
-    width: 60%;
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
+.seccion-buscar {
+    padding-top: 8rem;
+    padding-bottom: 15rem;
+    text-align: center;
+    /*font-size: 38px;*/
 }
 
-.texto{
-    width:100%;
-    margin: 1% auto;
-    font-size: 1.4vw;
+.cuadro-buscar{
+    padding: 1rem;
+    margin: 1rem .2rem 5rem .2rem;
+    border: 0px solid white;
+    background-color: var(--color-white);
+    color: var(--color-gray);
+    box-shadow: 0px 0px 5px var(--color-gray);
+}
+
+/* ********************* FICHAS ****************** */
+.seccion-fichas {
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(197, 194, 178);
+}
+
+.contenedor-fichas{
+    position: relative;
+    width: 15rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 4rem;
+}
+
+.ficha{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 5px var(--color-gray);
+    background-color: var(--color-white);
+    text-align: center;
+    color: var(--color-gray);
+    overflow: hidden;
+
+
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    row-gap: 1.2rem;
+    align-content: space-around;
+}
+
+.ficha img{
+    width: 100%;
+}
+
+.ficha h3{
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--color-principal);
 }
-
-        /* ----------- seleccion tamaño ----------- */
-.contiene-size{
-    width: 60%;
-    margin: 1% auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows:3fr 1fr 1fr;
-    font-size: 1.5vw;
-    font-weight: 100;
-    color: var(--color-white);
-}
-
-.small {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 25%;
-}
-.medium {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%); 
-    width: 35%;
-}
-.big {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);   
-    width: 45%;
-}
-
-        /* ----------- seleccion ingredientes ----------- */
-.ingredientes{
-    width: 60%;
-    margin: 1% auto;
-    display: grid;
-    grid-template-columns: repeat(2, 3fr 2fr 5fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-items: end;
-    align-items: center;
-    row-gap: 2vh;
-    column-gap: 0.8vw;
-}
-.ingredientes > div{
-    width: 60%;
-    display: grid;
-    justify-items: center;
-}
-
-.ingredientes img{
-    width:200%;
-}
-
-.text{
-    font-size: 1.5vw;
-    font-weight: 100;
-    text-align: left;
-    justify-self: start;
-    color: var(--color-white);
-}
-
-        /* ----------- botones pedido ----------- */
-.pedido{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    width: 40%;
-    margin:5% auto;
-}
-
-.pedido input{
-    width: 70%;
-}
-
-.pedido input:hover {
-    opacity: 0.4;
-}
-
-        /* ----------- importes ----------- */
-.importes{
-    width: 30%;
-    margin:0 auto 2% auto;
-}
-
-/* ********************* FOOTER ****************** */
-footer{
-    width: 100%;
-    background-color: var(--color-orange);
-}
-.piee{
-    width:100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
-}
-
-.piee div{
-    font-size: 1.2vw;
+.ficha h4{
+    font-size: 0.7rem;
     font-weight: 300;
-    color: var(--color-white);
-    padding: 2%;
+}
+.ficha h5{
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--color-gold);
+
 }
 
-.redes{
+.ficha p{
+    font-size: 0.6rem;
+    font-weight: 300;
+}
+.ficha p{
+    font-size: 0.6rem;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/* ****************************************** FOOTER ****************** */
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: var(--color-principal);
+    text-align: center;
+    color: var(--color-gold);
+    padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items:end;
-    align-items: center;
-}
-
-.redes a{
-    align-items: center;
-    text-decoration: none;
-    color: var(--color-white);
-}
-
-.redes img{
-    width: 1.6vw;
-    display: grid;
+    grid-template-areas: "copyright cookies redes";
     justify-items: center;
     align-items: center;
-    margin-right: 0.5vw;
 }
 
-.redes a:hover {
+.copyright{
+    grid-area: copyright;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+.cookies{
+    grid-area: cookies;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.cookies ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.cookies a {
+    margin-right: 0.5rem;
     text-decoration: none;
-    opacity: 0.4;
-    color: var(--color-gray);
+    color: var(--color-gold);
+    font-weight: 400;
+    font-size: 1rem;
+
 }
 
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.redes a{
+    display: grid;
+    margin-right: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+}
+.redes img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.redes a:hover, .redesContacto a:hover, .cookies a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+}
 
-.error {
-    color: var(-color--white);
-    background-color: rgb(190, 87, 87);  
+@media screen and (max-width: 800px) {
+    footer{
+        grid-template-areas: "redes"
+                            "cookies"
+                            "copyright";
+    }
 }
